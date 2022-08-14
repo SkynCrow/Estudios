@@ -1,0 +1,115 @@
+header {
+    width: 100%;
+    margin: auto;
+}
+
+header img {
+    display: block;
+    margin: auto;
+    height: 25%;
+}
+
+header h1 {
+    margin: auto;
+    text-align: center;
+    text-shadow: black 1 1 1 1;
+}
+
+nav {
+    background-color: #111111;
+    color: white;
+    padding: 10px;
+    margin: 0 0 50px 0;
+    display: flex;
+}
+
+nav a {
+    background-color: #111111;
+    color: white;
+    padding: 10px;
+    margin: auto;
+}
+
+nav a:hover {
+    background-color: #333333;
+}
+
+footer {
+    background-color: #111111;
+    color: white;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    box-shadow: gray 1px 1px 1px 1px;
+    padding: 0 15px 0 15px;
+}
+
+#container {
+    float: left;
+    width: 75%;
+}
+
+.break {
+    float: none;
+    clear: both
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: center;
+}
+
+#centerContainer {
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+section {
+    box-shadow: gray 1px 1px 1px 1px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 2px;
+}
+
+#leftScotch {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    color: rgba(red, green, blue, 0.25)
+}
+
+#rightScotch {
+    position: absolute;
+    left: 80%;
+    top: 0;
+    color: rgba(red, green, blue, 0.25)
+}
+
+section h1 {
+    text-align: center;
+    padding: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: gray;
+}
+
+
+article span {
+    color: green;
+}
+
+#content {
+    margin-bottom: 0;
+}
+
+#date {
+    margin: 0;
+    color: gray;
+}

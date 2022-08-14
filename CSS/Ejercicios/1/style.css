@@ -1,0 +1,84 @@
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+header {
+  text-align: center;
+  background-color: aqua;
+  border: black 1 1 1 1;
+  border-style: solid;
+}
+
+#container {
+  width: 1200px;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  background-color: red;
+  border-style: solid;
+  border-color: rgba(255, 238, 0, 0.767);
+}
+#toolbar {
+  background-color: blue;
+  border: black 1 1 1 1;
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+aside {
+  width: 25%;
+  float: left;
+}
+
+#content {
+  border-style: solid;
+  border-color: green;
+  width: 70%;
+  float: left;
+}
+
+.box {
+  width: 40%;
+  height: 200px;
+  background-color: blanchedalmond;
+  border: black 1 1 1 1;
+  border-style: solid;
+  float: left;
+  margin: 3%;
+}
+
+.box > h1 {
+  width: 40%;
+  height: 200px;
+  background-color: blanchedalmond;
+  border: black 1 1 1 1;
+  border-style: solid;
+  float: left;
+}
+#menu{
+  background-color: greenyellow;
+
+}
+#menu ul li {
+  border-style: solid;
+  display: inline-block;
+  padding:25px;
+}
+#menu ul li a{
+    background-color: blueviolet;
+}
+#menu ul li a:hover{
+    background-color: chocolate;
+    cursor: pointer;
+}
+#menu ul li a:active{
+    background-color: brown;
+}
+footer {
+  text-align: center;
+  background-color: aqua;
+  border: black 1 1 1 1;
+  border-style: solid;
+}
