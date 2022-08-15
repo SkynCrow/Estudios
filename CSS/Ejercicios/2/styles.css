@@ -1,3 +1,7 @@
+body{
+    background-image: url("../../../Recursos/img/paven.png");
+    background-repeat: repeat;
+}
 header {
     width: 100%;
     margin: auto;
@@ -39,19 +43,15 @@ footer {
     color: white;
 }
 
-aside {
-    display: flex;
-    flex-direction: column;
-    float: left;
-    box-shadow: gray 1px 1px 1px 1px;
-    padding: 0 15px 0 15px;
-}
+
 
 #container {
     float: left;
     width: 75%;
 }
-
+#container > a{
+    float: right;
+}
 .break {
     float: none;
     clear: both
@@ -67,28 +67,36 @@ label {
 }
 
 #centerContainer {
-    width: 80%;
+    width: 90%;
     margin: 0 auto 0 auto;
 }
 
 section {
+    background-color: white;
     box-shadow: gray 1px 1px 1px 1px;
     padding: 10px;
     margin: 20px;
     border-radius: 2px;
+    width: 60%;
 }
 
 #leftScotch {
-    position: absolute;
-    left: 10%;
-    top: 0;
+    position: relative;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    left: 5%;
+    top: -30px;
     color: rgba(red, green, blue, 0.25)
 }
 
 #rightScotch {
-    position: absolute;
-    left: 80%;
-    top: 0;
+    position: relative;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    left: 85%;
+    top: -30px;
     color: rgba(red, green, blue, 0.25)
 }
 
@@ -112,4 +120,56 @@ article span {
 #date {
     margin: 0;
     color: gray;
+}
+form button{
+    margin: 10px auto 0 auto ;
+    background-color: #71b053;
+    border: none;
+    padding: 10px 12px;
+    color: white;
+    border-radius: 5px;
+}
+aside {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    box-shadow: gray 1px 1px 1px 1px;
+    padding: 0 15px 0 15px;
+    margin: 0 20px 0 0;
+    width: 25%;
+}
+aside h4{
+    text-align: center;
+}
+
+aside a{
+    color:#71b053
+}
+aside ul{
+    margin: 0 0 10px 0 ;
+}
+.asidetitle{
+    background-color: #f2f3f2;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #e1e2e1;
+    border-width: 2px;
+}
+#aula1{
+    color: #3a74f2;
+    border-bottom-style: none;
+    border-width: 2px;
+}
+#aula2{
+    color: #a02b22;
+    border-top-style: none;
+    border-width: 2px;
+}
+.doted{
+    border-top-style: dotted;
+    border-color: #c1c1c1;
+}
+#frasedeldia{
+    
 }
