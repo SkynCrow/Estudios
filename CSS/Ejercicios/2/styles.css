@@ -1,42 +1,133 @@
-body{
+/* Fonts */
+
+@font-face {
+    font-family: "nevis";
+    src: url("../../../Recursos/fonts/nevis.eot");
+    src: url("../../../Recursos/fonts/nevis.eot?iefix") format("embedded-opentype"),
+        url("../../../Recursos/fonts/nevis.woff") format("woff"),
+        url("../../../Recursos/fonts/nevis.ttf") format("truetype"),
+        url("../../../Recursos/fonts/nevis.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styles */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
     background-image: url("../../../Recursos/img/paven.png");
     background-repeat: repeat;
 }
+
+/* Header */
 header {
     width: 100%;
     margin: auto;
+    height: 250px;
+    padding-top: 20px;
 }
 
 header img {
     display: block;
-    margin: auto;
-    height: 25%;
+    text-align: center;
+    margin: 0 auto;
+    width: 140px;
 }
 
 header h1 {
-    margin: auto;
     text-align: center;
-    text-shadow: black 1 1 1 1;
+    font-size: 40px;
+    font-family: "nevis";
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    color: #70b231;
+    text-shadow: #333333 0px 2px 1px;
+    transition: all 300ms;
 }
+
+header h1:hover {
+    text-shadow: #333333 0px 2px 1px, #70b231 0px 0px 4px;
+}
+
+/* Navbar */
 
 nav {
-    background-color: #111111;
-    color: white;
-    padding: 10px;
-    margin: 0 0 50px 0;
-    display: flex;
-}
-
-nav a {
-    background-color: #111111;
-    color: white;
-    padding: 10px;
-    margin: auto;
-}
-
-nav a:hover {
+    width: 100%;
+    height: 40px;
     background-color: #333333;
+    color: white;
+    font-family: sans-serif, Helvetica, Arial;
+    font-size: 14px;
+    box-shadow: 0px 0px 2px gray;
 }
+
+nav ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    width: 1130px;
+}
+
+nav>ul>li {
+    line-height: 40px;
+    float: left;
+    border-right: 1px solid gray;
+    transition: all 300ms;
+}
+
+nav>ul>li:hover {
+    background-color: #70b231;
+    box-shadow: 0 2px 4px green inset;
+}
+
+nav>ul>li a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav>ul>li a:first-child {
+    border-left: 1px solid gray;
+}
+
+/* Menu Desplegable */
+
+nav>ul>li>ul {
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;
+}
+
+nav>ul>li:hover>ul {
+    display: block;
+}
+
+nav>ul>li:hover>ul>li {
+    background-color: #f2f1f0;
+    border-bottom: 1px solid #D6D6D6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+nav>ul>li:hover>ul>li a {
+    color: black;
+}
+nav>ul>li:hover>ul>li:hover {
+    box-shadow: inset 0px 0px 6px #333333;
+    background-color: #ccc;
+}
+/* footer */
 
 footer {
     background-color: #111111;
@@ -49,9 +140,11 @@ footer {
     float: left;
     width: 75%;
 }
-#container > a{
+
+#container>a {
     float: right;
 }
+
 .break {
     float: none;
     clear: both
@@ -121,14 +214,16 @@ article span {
     margin: 0;
     color: gray;
 }
-form button{
-    margin: 10px auto 0 auto ;
-    background-color: #71b053;
+
+form button {
+    margin: 10px auto 0 auto;
+    background-color: #70b231;
     border: none;
     padding: 10px 12px;
     color: white;
     border-radius: 5px;
 }
+
 aside {
     background-color: white;
     display: flex;
@@ -139,37 +234,42 @@ aside {
     margin: 0 20px 0 0;
     width: 25%;
 }
-aside h4{
+
+aside h4 {
     text-align: center;
 }
 
-aside a{
-    color:#71b053
+aside a {
+    color: #70b231
 }
-aside ul{
-    margin: 0 0 10px 0 ;
+
+aside ul {
+    margin: 0 0 10px 0;
 }
-.asidetitle{
+
+.asidetitle {
     background-color: #f2f3f2;
     border-top-style: solid;
     border-bottom-style: solid;
     border-color: #e1e2e1;
     border-width: 2px;
 }
-#aula1{
+
+#aula1 {
     color: #3a74f2;
     border-bottom-style: none;
     border-width: 2px;
 }
-#aula2{
+
+#aula2 {
     color: #a02b22;
     border-top-style: none;
     border-width: 2px;
 }
-.doted{
+
+.doted {
     border-top-style: dotted;
     border-color: #c1c1c1;
 }
-#frasedeldia{
-    
-}
+
+#frasedeldia {}
