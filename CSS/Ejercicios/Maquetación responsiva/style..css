@@ -1,0 +1,55 @@
+/* General */
+@font-face {
+    font-family: "webfonts";
+    src: url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.eot");
+    src: url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.eot?iefix") format("embedded-opentype"),
+        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url("../../../Recursos/Maquetación responsiva/img/pattern.png");
+    background-repeat: repeat;
+}
+/* Final General */
+
+/* Header */
+
+header{
+    background-color: black;
+    color: white;
+    height: 70px;
+}
+
+header h1{
+    background-color: #37BCF9;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    
+}
+header ul {
+    float: left;
+}
+header ul li{
+    list-style: none;
+    float: left;
+    padding: 10px;
+    transition: all 300ms;
+}
+header ul li:hover {
+    background-color: gray;
+    box-shadow: inset;
+}
+header ul li a{
+    color: white;
+}
+/* Final Header */
