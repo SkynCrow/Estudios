@@ -6,6 +6,19 @@
         url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.woff") format("woff"),
         url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.ttf") format("truetype"),
         url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.svg") format("svg");
+
+}
+
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url("../../../Recursos/Maquetación responsiva/fonts/TrebuchetMS.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("../../../Recursos/Maquetación responsiva/fonts/BebasNeue.otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -13,43 +26,268 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "TrebuchetMS";
 }
 
-body{
+body {
     background-image: url("../../../Recursos/Maquetación responsiva/img/pattern.png");
     background-repeat: repeat;
 }
+
+.generalContainer {
+    display: block;
+    margin: auto;
+    max-width: 64%;
+}
+
+.center {
+    margin: auto;
+}
+
+.webicon {
+    font-family: "webfonts";
+}
+
+section {
+    display: block;
+    height: fit-content;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
 /* Final General */
 
 /* Header */
 
-header{
+header {
     background-color: black;
     color: white;
-    height: 70px;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
-header h1{
-    background-color: #37BCF9;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    
-}
-header ul {
+header>div>a {
+    display: block;
     float: left;
+    width: 170px;
+    height: 40px;
+    margin-left: 10px;
+    padding: 10 0 10 30;
+    background-color: #37BCF9;
+    text-decoration: double;
+    color: white;
+    font-size: 34px;
 }
-header ul li{
+
+header>div>a>h3 {
+    float: right;
+    display: block;
+    margin-right: 30px;
+
+}
+
+header>div>a>span {
+    float: left;
+    display: block;
+    font-size: 32;
+}
+
+/* Menu */
+header nav {
+    float: right;
+    display: block;
+}
+
+header nav ul {
+    float: right;
+    margin-right: 200px;
+}
+
+header nav ul li {
     list-style: none;
     float: left;
-    padding: 10px;
     transition: all 300ms;
-}
-header ul li:hover {
-    background-color: gray;
-    box-shadow: inset;
-}
-header ul li a{
+    padding: 22px;
     color: white;
 }
-/* Final Header */
+
+header nav ul li a {
+    color: white;
+    font-size: 26;
+    text-decoration: none;
+
+}
+
+header nav ul li:hover {
+    background-color: gray;
+}
+
+/* End Menu */
+
+
+/* End Header */
+
+/* Banner */
+#bannerContainer {
+    background-image: url("../../../Recursos/Maquetación responsiva/img/bakbaner.png");
+    background-position: -200 -200;
+    width: 100%;
+    padding: 10px;
+    border: solid white 10px;
+    box-shadow: gray 0px 0px 2px;
+    height: 100px;
+    margin-bottom: 70px;
+}
+
+#bannerContainer h1 {
+    font-family: "BebasNeue";
+    font-size: 45px;
+    letter-spacing: 2px;
+    display: block;
+    color: white;
+    margin: 27px auto;
+    float: left;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* End Banner */
+
+/* Card */
+
+.card {
+    display: block;
+    width: 210px;
+    height: 300px;
+    box-shadow: gray 0px 0px 2px;
+    margin-right: 35px;
+    float: left;
+    text-align: center;
+    background-color: white;
+}
+
+#cardcontainer {
+    height: 300px;
+}
+
+.card:last-child {
+    margin-right: 0px;
+
+}
+
+.card h1 {
+    margin: 30px auto;
+    font-size: 54px;
+    display: block;
+    width: 80%;
+}
+
+.card h3 {
+    margin-bottom: 30px
+}
+
+/* End Card */
+
+/* Articles */
+#contentContainer {
+    margin-top: 50px;
+}
+
+.title {
+    background-color: #ccc;
+    text-transform: uppercase;
+    font-family: "BebasNeue";
+    box-shadow: 2px 2px 2px black;
+    font-size: 30;
+}
+
+#articleContainer {
+    float: left;
+    width: 70%;
+}
+
+#articleContainer>h1 {
+    height: 65px;
+    text-align: center;
+    margin: auto;
+    line-height: 2;
+    font-size: 36;
+}
+
+#contentArticle {
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: gray 0px 0px 2px;
+    padding: 15px;
+}
+
+#contentArticle h2 {
+    display: block;
+    float: left;
+    color: #00538C;
+}
+
+#articleContainer #contentArticle span {
+    display: block;
+    background-color: #393D3F;
+    color: white;
+    float: right;
+    position: relative;
+    top: -15px;
+    right: -15;
+    padding: 10px;
+}
+
+#contentArticle p {
+    padding: 10px 0;
+}
+
+/* Lateral Bar*/
+aside {
+    float: right;
+    width: 300px;
+}
+#searchContainer div{
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px gray; 
+}
+#searchContainer input {
+    margin: 15px 25px;
+    width: 75%;
+    padding: 5px;
+    
+}
+#searchContainer span{
+
+}
+
+/* End Lateral Bar */
+#articleContainer button {
+    margin-top: 60px;
+    display: block;
+    width: 100%;
+    border: none;
+    box-shadow: 0px 0px 2px gray;
+    background-color: white;
+    height: 120px;
+    font-family: "BebasNeue";
+    font-size: 40px;
+}
+
+/* End Articles */
+/* Footer */
+footer {
+    display: block;
+    background-color: black;
+    height: 400px;
+    margin-top: 40px;
+    padding: 40px;
+}
+
+/* End Footer */
