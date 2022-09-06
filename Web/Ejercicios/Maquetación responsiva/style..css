@@ -1,24 +1,24 @@
 /* General */
 @font-face {
     font-family: "webfonts";
-    src: url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.eot");
-    src: url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.eot?iefix") format("embedded-opentype"),
-        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.woff") format("woff"),
-        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.ttf") format("truetype"),
-        url("../../../Recursos/Maquetación responsiva/fonts/websymbols-regular-webfont.svg") format("svg");
+    src: url("Recursos/fonts/websymbols-regular-webfont.eot");
+    src: url("Recursos/fonts/websymbols-regular-webfont.eot?iefix") format("embedded-opentype"),
+        url("Recursos/fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("Recursos/fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("Recursos/fonts/websymbols-regular-webfont.svg") format("svg");
 
 }
 
 @font-face {
     font-family: "TrebuchetMS";
-    src: url("../../../Recursos/Maquetación responsiva/fonts/TrebuchetMS.ttf");
+    src: url("Recursos/fonts/TrebuchetMS.ttf");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "BebasNeue";
-    src: url("../../../Recursos/Maquetación responsiva/fonts/BebasNeue.otf");
+    src: url("Recursos/fonts/BebasNeue.otf");
     font-weight: normal;
     font-style: normal;
 }
@@ -30,7 +30,7 @@
 }
 
 body {
-    background-image: url("../../../Recursos/Maquetación responsiva/img/pattern.png");
+    background-image: url("Recursos/img/pattern.png");
     background-repeat: repeat;
 }
 
@@ -134,7 +134,7 @@ header nav ul li:hover {
 
 /* Banner */
 #bannerContainer {
-    background-image: url("../../../Recursos/Maquetación responsiva/img/bakbaner.png");
+    background-image: url("Recursos/img/bakbaner.png");
     background-position: -200 -200;
     width: 100%;
     padding: 10px;
