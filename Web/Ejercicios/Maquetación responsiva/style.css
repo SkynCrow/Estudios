@@ -34,10 +34,10 @@ body {
     background-repeat: repeat;
 }
 
-.generalContainer {
+.wrap {
     display: block;
     margin: auto;
-    max-width: 64%;
+    max-width: 1250px;
 }
 
 .center {
@@ -73,21 +73,25 @@ header {
     background-color: black;
     color: white;
     width: 100%;
-    height: 50px;
-    padding: 10px;
     margin-bottom: 20px;
 }
-
 #blog {
-    display: block;
-    float: left;
+    display: inline-block;
     width: 170px;
     height: 40px;
-    margin-left: 15px;
+    margin: 10px;
     padding: 5 0 5 30;
     background-color: #37BCF9;
     text-decoration: double;
     color: white;
+    overflow: hidden;
+    transition: 300ms all;
+}
+
+#blog:hover {
+    border-radius: 2px;
+    color: black;
+    background-color: #CCC;
 }
 
 #blog h3 {
@@ -97,30 +101,70 @@ header {
     font-size: 40px;
 }
 
+#blog:hover h3 {
+    animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
 #blog span {
     float: left;
     display: block;
     font-size: 32;
+    animation: rotate-gear 2s infinite linear;
+}
+
+@keyframes rotate-gear {
+    from {
+
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#blog:hover span {
+    animation: fromBellow 500ms linear;
+
+}
+
+@keyframes fromBellow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 /* Menu */
 header nav {
-    float: right;
     display: block;
-}
-
-header nav ul {
     float: right;
-    margin-right: 200px;
+    margin: 10px 15% auto auto;
 }
 
 header nav ul li {
     list-style: none;
     padding: 10px 20px;
     color: white;
-    float: left;
     transition: all 300ms;
-
+    display: inline-block;
 }
 
 header nav ul li a {
@@ -134,7 +178,8 @@ header nav ul li:hover {
     background-color: gray;
     text-shadow: black 2px 2px 2px;
 }
-header nav ul li:active{
+
+header nav ul li:active {
     background-color: black;
 }
 
@@ -147,12 +192,24 @@ header nav ul li:active{
 #bannerContainer {
     background-image: url("Recursos/img/bakbaner.png");
     background-position: -200 -200;
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: solid white 10px;
     box-shadow: gray 0px 0px 2px;
-    height: 100px;
+    height: 80px;
     margin-bottom: 70px;
+    overflow: hidden;
+    animation: backBanner 10s linear;
+}
+
+@keyframes backBanner {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -200px -200px;
+    }
 }
 
 #bannerContainer h1 {
@@ -165,28 +222,61 @@ header nav ul li:active{
     float: left;
     width: 100%;
     text-align: center;
+    letter-spacing: 10px;
     text-shadow: 2px 2px 2px black;
+    animation: showText 10s linear;
+}
+
+@keyframes showText {
+    0% {
+        transform: translateX(-600px) scale(5, 5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(600px) scale(5, 5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-600px) scale(5, 5);
+        color: transparent;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        opacity: 1;
+    }
 }
 
 /* End Banner */
 
 /* Card */
-
+#cardContainer{
+    margin-bottom: 125px;
+    text-align: center;
+}
 .card {
-    display: block;
-    width: 210px;
+    display: inline-block;
+    width: 17%;
+    margin: 0 1.5% ;
     height: 300px;
     box-shadow: gray 0px 0px 2px;
-    margin-right: 35px;
-    float: left;
     text-align: center;
     background-color: white;
+    overflow: hidden;
+    transition: 300ms all;
 }
 
-#cardcontainer {
-    height: 300px;
+.card:hover {
+    background-color: black;
 }
 
+.card:first-child {
+    margin-left: 0px;
+
+}
 .card:last-child {
     margin-right: 0px;
 
@@ -199,8 +289,66 @@ header nav ul li:active{
     width: 80%;
 }
 
+.card:hover h1 {
+    font-size: 70px;
+    color: #37BCF9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
 .card h3 {
     margin-bottom: 30px
+}
+
+.card:hover h3 {
+    color: white;
+    animation: showCategory 400ms linear
+}
+
+@keyframes showCategory {
+    from {
+        transform: translateY(-300px);
+        color: black;
+    }
+
+    to {
+        transform: translateY(0%);
+        color: white;
+    }
+}
+
+.card p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color: #00538C;
+    font-size: 15px;
+    transition: all 300ms;
+}
+
+.card:hover p {
+    color: white;
+    animation: showDescription 400ms linear;
+}
+
+@keyframes showDescription {
+    from {
+        transform: translateX(-300%);
+        color: black;
+    }
+
+    to {
+        transform: translateX(0%);
+        color: white;
+    }
 }
 
 /* End Card */
@@ -221,7 +369,7 @@ header nav ul li:active{
 
 #articleContainer {
     float: left;
-    width: 70%;
+    width: 69.5%;
 }
 
 #articleContainer>h1 {
@@ -245,7 +393,7 @@ header nav ul li:active{
     color: #00538C;
 }
 
-#articleContainer #contentArticle span {
+.dateArticle {
     display: block;
     background-color: #393D3F;
     color: white;
@@ -254,6 +402,7 @@ header nav ul li:active{
     top: -15px;
     right: -15;
     padding: 10px;
+    transition: all 300ms;
 }
 
 #contentArticle p {
@@ -270,13 +419,47 @@ header nav ul li:active{
     height: 120px;
     font-family: "BebasNeue";
     font-size: 40px;
+    transition: 1s all;
+}
+
+#articleContainer button:hover {
+    background-color: #333;
+    border: 10px solid #37BCF9;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px gray;
+    text-shadow: 1px 1px 1px black, 1px 2px 1x black, 1px 3px 1px black, 1px 4px 1x black, 1px 5px 1px black, 1px 6px 1x black;
+    color: white;
+    animation: blink 10s infinite linear;
+}
+
+@keyframes blink {
+    0% {
+        border: 10px solid #37BCF9
+    }
+
+    25% {
+        border: 10px solid green
+    }
+
+    50% {
+        border: 10px solid yellow
+    }
+
+    75% {
+        border: 10px solid white
+    }
+
+    100% {
+        border: 10px solid #37BCF9
+    }
 }
 
 /* Lateral Bar*/
 
 aside {
     float: right;
-    width: 300px;
+    width: 30%;
+    max-width: 300px;
 }
 
 /* Search */
@@ -310,7 +493,7 @@ aside {
     padding: 5px;
     margin-left: 5px;
     border: 0px;
-    width: 200px;
+    width: 80%;
 }
 
 .input span {
@@ -331,19 +514,29 @@ aside {
     margin: auto;
 }
 
-#buttons input {
+#buttons input[type="submit"],
+#buttons input[type="reset"],
+#buttons button {
     display: block;
-    background-color: #3EB7E4;
+    text-align: center;
+    width: 100px;
+    height: 35px;
+    background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
     color: white;
-    padding: 10px 30px;
+    border: 1px solid #156785;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'TrebuchetMS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
     transition: all 300ms
 }
 
-#buttons button:first-child {
+#buttons input[type="submit"] {
     float: left;
 }
 
-#buttons button:last-child {
+#buttons input[type="reset"] {
     float: right;
 }
 
@@ -351,27 +544,50 @@ aside {
     margin-top: 20px;
 }
 
+#buttons input[type="submit"]:hover,
+#buttons input[type="reset"]:hover,
 #loginContainer button:hover {
-    background-color: #4FC8F5;
-}
+    background: linear-gradient(to bottom, #feb8e5 0%, #fca0ca 100%);
 
-#loginContainer button:active {
-    background-color: #51D916;
 }
 
 /* End Login */
 /* Social */
-#socialContainer .box ul {
-    list-style: none;
-}
-
-#socialContainer .box ul li {
-    font-size: 40;
-}
-
 #socialContainer .box {
     margin: 20px 40px 30px 40px;
 }
+
+.overlay {
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #F4F7FE;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -40px;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: 400ms all;
+}
+
+#socialContainer>div div:hover .overlay {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+#socialContainer a {
+    font-size: 40;
+    color: black;
+}
+
+
 
 /* End Social */
 /* Collab */
@@ -386,16 +602,15 @@ aside {
 footer {
     display: block;
     background-color: black;
-    height: 400px;
     margin-top: 40px;
     padding: 40px;
 }
 
 footer section section {
-    width: 320px;
+    width: 30%;
     height: 360px;
     float: left;
-    margin-right: 35px;
+    margin-right: 4%;
 }
 
 footer section section:last-child {
@@ -408,8 +623,11 @@ footer h1 {
 }
 
 /* Menu */
+#menu{
+    float: left;
+}
 #menu nav {
-    padding: 20px 40px;
+    padding: 10px 20px;
 }
 
 #menu nav ul {
@@ -420,29 +638,73 @@ footer h1 {
 }
 
 #menu nav ul li {
-    padding: 10px;
+    padding: 20px;
+    border-bottom: solid #CCC 1px;
 }
 
 #menu nav ul li a {
     text-decoration: none;
+    color: #00538C;
+    transition: all 300ms;
+}
+
+#menu nav ul li:hover a {
+    padding-left: 20px;
+    color: white;
+    width: 100%s;
 }
 
 /* End Menu */
 /* Where */
+footer iframe {
+    float: left;
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5x solid white;
+    box-shadow: 0px 0px 5px gray;
+}
 
 /* End Where */
+/* Dev */
+#dev{
+    float: left;
+}
+#dev>div>img {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 250px;
+}
+
+/* End Dev */
+/* Optmizate */
+#browsers {
+    margin: 10px auto;
+    text-align: center;
+    width: 95%;
+    height: 50px;
+}
+
+.browser {
+    display: inline-block;
+    margin: auto;
+    width: 14%;
+
+}
+
+/* End Optimizate */
 /* Author */
 
 #dev p {
     color: white;
     padding: 10px;
+    text-align: center;
 }
 
-#imagen {
-    margin: auto;
-    width: 50px;
-    float: left;
-}
+
 
 /* End Author */
+
 /* End Footer */

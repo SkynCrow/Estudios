@@ -1,0 +1,174 @@
+@media(max-width:1250px) {
+    .wrap {
+        max-width: 100%;
+        width: 90%;
+        margin: 0px auto;
+
+    }
+
+    #buttons input[type="submit"],
+    #buttons input[type="reset"],
+    #buttons button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #loginContainer>div {
+        margin: 20px 40px 30px 20px;
+        padding-bottom: 60px;
+    }
+
+    header nav ul {
+        margin: 0;
+    }
+}
+
+@media (max-width:1000px) {
+    .card p {
+        font-size: 14px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    input[type="reset"] {
+        display: none;
+
+    }
+
+    header nav {
+        margin: 0;
+    }
+}
+
+@media(max-width:850px) {
+    header nav {
+        margin: 0;
+    }
+
+    #dev>div>img {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 25;
+    }
+
+    #contentArticle span {
+        font-size: 14;
+    }
+}
+
+@media(max-width:715px) {
+    .dateArticle{
+        float: none;
+        clear: both;
+        margin: -15 -15 10 -15;
+        padding: 5px 15px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 13;
+    }
+    #contentArticle span {
+        font-size: 12;
+    }
+
+    header nav {
+        float: none;
+        clear: auto;
+        display: inline-block;
+        margin: 0;
+    }
+
+    header nav ul li {
+        width: 100%;
+        padding: 10px 20px;
+        color: white;
+        transition: all 300ms;
+    }
+
+    #dev>div>img {
+        display: block;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 20;
+    }
+
+    .card {
+        height: 150px;
+        width: 15%;
+    }
+
+    .card h1 {
+        font-size: 30;
+    }
+
+    .card h3 {
+        font-size: 14;
+    }
+
+    .card p {
+        display: none;
+    }
+
+    #bannerContainer {
+        font-size: 20;
+    }
+}
+
+@media(max-width:650px) {
+    .card{
+        width: 100%;
+        margin: 10 0;
+        max-width: 300px;
+        height: 250;
+        padding: 10px
+    }
+    .card h3{
+        font-size: 25;
+    }
+    .card p{
+        display: block;
+        font-size: 15;
+    }
+    footer {
+        padding-bottom: 10px;
+    }
+
+    #articleContainer {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        float: none;
+        clear: both;
+        margin: auto;
+        max-width: 400px;
+    }
+
+    #menu,
+    #where,
+    #dev {
+        float: none;
+        margin-bottom: 50px;
+    }
+
+    footer section section {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 30;
+    }
+    
+}
