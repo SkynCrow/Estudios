@@ -1,0 +1,88 @@
+* {
+    font-family: sans-serif;
+}
+
+#grid {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 100px 70px 1fr 70px;
+    min-height: 100vh;
+}
+/* Header */
+header {
+    background-color: blue;
+    grid-column: 1/6;
+    grid-row: 1;
+
+}
+header h1{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: black 2px 2px 1px;
+}
+/* Menu */
+nav {
+    grid-column: 1/6;
+    grid-row: 2;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav a{
+    flex-grow: 1;
+    text-decoration: none;
+    padding: 10px;
+    background-color: bisque;
+    border: black solid 1px;
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+}
+
+/* Lateral */
+aside {
+    grid-column: 1/1;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+aside a{
+    text-align: center;
+    text-decoration: none;
+    color: cornsilk;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    margin: 15px;
+    background-color: crimson;
+}
+/* End Lateral */
+/* Content */
+section {
+    grid-column: 2/6;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 25px;
+    padding: 25px;
+}
+
+article {
+    background-color: purple;
+
+}
+/* End Content */
+/* Footer */
+footer {
+    grid-column: 1/6;
+    background-color: orange;
+}
+footer h3{
+    text-align: center;
+
+}
+/* End Footer */

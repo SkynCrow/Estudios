@@ -1,0 +1,183 @@
+* {
+    font-family: sans-serif;
+}
+
+.wrap {
+    max-width: 1370px;
+    margin: 82px auto;
+    box-shadow: #ccc 0px 0px 15px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 120px;
+    border-bottom: #eee solid 1px;
+    padding: 15px 30px;
+}
+
+header h1 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 35px;
+    text-shadow: gray 1px 1px 1px;
+}
+
+header nav a {
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+/* End Header */
+
+/* Center Content */
+
+#centerContent {
+    margin: 20px 15px;
+    display: flex;
+    min-height: 600px;
+    flex-direction: row;
+}
+
+/* Lateral Bar */
+aside {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 30%;
+    max-width: 200px;
+    min-width: 200px;
+}
+
+aside h3 {
+    font-weight: lighter;
+    border-bottom: solid #eee 1px;
+    padding: 10px 0px;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+    font-size: 15;
+    background-color: #eee;
+    padding: 20px 20px;
+    margin: 10px 0;
+    max-width: 200px;
+}
+
+/* End Lateral Bar */
+/* Content */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+.card {
+    flex-grow: 1;
+    flex-basis: 240px;
+    border: gray solid 1px;
+    margin: 10px;
+}
+
+.card img {
+    width: 100%;
+}
+.textWrap{
+    margin: 10px;
+}
+.card a {
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0px;
+}
+
+.card p {
+    font-size: 14;
+    margin:0;
+    color: gray;
+}
+
+/* End Content */
+/* End Center Content */
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 120px;
+    padding: 15px 30px;
+}
+
+footer h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 40px;
+    color: gray;
+}
+
+footer h3 {
+    font-weight: lighter;
+
+}
+
+/* End Footer */
+
+/* Responsive */
+
+@media(max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    #centerContent {
+        flex-direction: column;
+    }
+    aside{
+        margin: auto;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
+    aside a{
+        max-width: 100%;
+    }
+
+}
+@media(max-width:470px){
+    header{
+        flex-direction: column;
+        max-height: 100%;
+    }
+    header nav{
+        display: flex;
+        flex-direction: column;
+    }
+    #centerContent {
+        flex-direction: column;
+    }
+    aside{
+        margin: auto;
+        max-width: 100%;
+        min-width: 100%;
+        width: 100%;
+        margin-bottom: 40px;
+
+    }
+    aside a{
+        max-width: 100%;
+    }
+    footer{
+        flex-direction: column;
+        margin-bottom: 100px;
+        max-height: 100%;
+    }
+}
+/* End Responsive */
